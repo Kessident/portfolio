@@ -181,8 +181,8 @@ a:focus, a:hover {
 }
 
 .content-section {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .download-section {
@@ -291,6 +291,6 @@ body {
   color: black;
 }
 
-li > a, li > a:focus {
+.link-no-focus:focus  {
   color: white;
 }
