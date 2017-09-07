@@ -294,3 +294,7 @@ body {
 .link-no-focus:focus  {
   color: white;
 }
+
+div img {
+  width: 100%;
+}
