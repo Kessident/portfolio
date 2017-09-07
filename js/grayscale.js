@@ -38,27 +38,30 @@
   $('#modal-structure').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget); // Button that triggered the modal
     var projectNumber = button.data('number'); // Extract info from data-* attributes
+    var title = button.text();
+    var body = $(".modal-body-" + projectNumber);
     // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
     var modal = $(this);
     var modalTitle = modal.find('.modal-title');
     var modalBody = modal.find('.modal-body');
+
     switch (projectNumber) {
       case 1:
-        modalTitle.text("College Book Buy");
-        modalBody.html("Stuff stuff information goes here. Now <del>supporting</del> <b>HTML</b>");
+        modalTitle.text(title);
+        modalBody.html(body.html());
         break;
       case 2:
-        modalTitle.text("TIY May Hackathon");
-        modalBody.html("Stuff stuff information goes here. Now <del>supporting</del> <b>HTML</b>");
+        modalTitle.text(title);
+        modalBody.html(body.html());
         break;
       case 3:
-        modalTitle.text("Gabble");
-        modalBody.html("Stuff stuff information goes here. Now <del>supporting</del> <b>HTML</b>");
+        modalTitle.text(title);
+        modalBody.html(body.html());
         break;
       case 4:
-        modalTitle.text("Book Club");
-        modalBody.html("Stuff stuff information goes here. Now <del>supporting</del> <b>HTML</b>");
+        modalTitle.text(title);
+        modalBody.html(body.html());
         break;
       default:
 
