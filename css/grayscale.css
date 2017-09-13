@@ -295,6 +295,7 @@ body {
   color: white;
 }
 
-div img {
+.modal-img img {
   width: 100%;
+  /*max-height: 500px;*/
 }

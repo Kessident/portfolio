@@ -64,24 +64,28 @@
         modalBody.html(body.html());
         var filmClubTimeout = setInterval(() => {
           var filmClubImage = $("#film-club-image");
+          var filmClubImageTitle = $("#film-club-image-title")
 
           if (modal.is(':visible')) {
             switch (filmClubImage.attr("src")) {
               case "img/projects/film-club-lg.png":
                 filmClubImage.attr("src", "img/projects/film-club-md.png");
+                filmClubImageTitle.text("Tablet");
                 break;
               case "img/projects/film-club-md.png":
                 filmClubImage.attr("src", "img/projects/film-club-sm.png");
+                filmClubImageTitle.text("Mobile");
                 break;
               case "img/projects/film-club-sm.png":
                 filmClubImage.attr("src", "img/projects/film-club-lg.png");
+                filmClubImageTitle.text("Desktop");
                 break;
             }
           } else {
             filmClubImage.attr("src", "img/projects/film-club-lg.png");
             clearInterval(filmClubTimeout);
           }
-        }, 1000);
+        }, 3000);
         break;
       default:
 
